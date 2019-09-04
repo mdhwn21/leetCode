@@ -1,2 +1,2 @@
 # leetCode
-Solutions to LeetCode 
+Solutions attempts on LeetCode 
