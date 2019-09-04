@@ -18,22 +18,36 @@ class Solution:
                 j = j+1
             i = i+1
         #Remove Duplicates
-        i=0;j=0;
-        while i<len(resultArr):
-            j=i+1
+        # Remove Duplicates
+        i = 0;
+        j = 0;
+        arrLen = len(resultArr)
+        while i < arrLen:
+            j = i + 1
             resI = resultArr[i]
-            print("i->",resI)
-            while j<len(resultArr):
+            resI.sort()
+            # print("Checking For",resI)
+            while j < arrLen:
                 resJ = resultArr[j]
-                print("j->",resJ)
-                if (resJ[0] in resI and resJ[1] in resI and resJ[2] in resI):
-                    print("Deleteing",resultArr[j])
+                resJ.sort()
+                # print("j->", resJ)
+                if resJ[0] == resI[0] and resJ[1] == resJ[1] and resJ[2] == resI[2]:
+                    print("Checking for ", resI, "Deleting", resultArr[j])
                     del resultArr[j]
-                j = j+1
-            i=i+1
-                
+                    arrLen = arrLen - 1
+                    j = i + 1
+                else:
+                    j = j + 1
+            i = i + 1
         return resultArr
+
                 
+            
+            
+        
+        
+        
+        
             
             
         
